@@ -2,24 +2,34 @@
   import { slide } from 'svelte/transition';
   export let item = {};
   export let i = 0;
-  let active = i === 0;
+  export let active = 0;
+
+  import { createEventDispatcher } from 'svelte';
+	const setActive = createEventDispatcher();
+
+  function checkActive(state) {
+    if(state === active) {
+      return -1;
+    }else{
+      return i;
+    }
+  }
+
 </script>
 <div class="pt-6">
-  <dt class="text-lg">
+  <dt class="text-lg min-w-full">
     <!-- Expand/collapse question button -->
-    <button type="button" on:click="{() => active = !active}" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
-      <span class="font-medium text-gray-900">
+    <button type="button" on:click="{() => setActive('activeState', checkActive(i))}" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-{i}" aria-expanded="false">
+      <span class="{active == i ? 'text-gray-800 font-bold' : 'font-medium text-gray-500'}">
         {item.question}
       </span>
       <span class="ml-6 h-7 flex items-center">
-        <svg class="h-6 w-6 transform... {active ? 'rotate-0' : '-rotate-180'}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <svg viewBox="0 0 10 7" class="h-3.5 w-3.5 transform ... {active == i ? 'rotate-0' : '-rotate-180'}" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
       </span>
     </button>
   </dt>
-  {#if active }
-  <dd transition:slide class="mt-2 pr-12" id="faq-0">
+  {#if active == i}
+  <dd transition:slide class="mt-2 pr-12" id="faq-{i}">
     <p class="text-base text-gray-500">
       {item.answer}
     </p>
