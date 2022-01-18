@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-with-svelte-and-tailwindcss-FBU9QawLh](https://www.frontendmentor.io/solutions/faq-accordion-with-svelte-and-tailwindcss-FBU9QawLh)
 - Live Site URL: [https://rm-fm-faq-accordion-card.netlify.app](https://rm-fm-faq-accordion-card.netlify.app/)
 
 ## My process
