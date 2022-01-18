@@ -19,7 +19,7 @@
 <div class="pt-6">
   <dt class="text-lg min-w-full">
     <!-- Expand/collapse question button -->
-    <button type="button" on:click="{() => setActive('activeState', checkActive(i))}" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-{i}" aria-expanded="{active ? 'false' : 'true'}">
+    <button type="button" on:click="{() => setActive('activeState', checkActive(i))}" class="text-left w-full flex justify-between items-start focus:outline-offset-8 focus:outline-slate-300 text-gray-400" aria-controls="faq-{i}" aria-expanded="{active ? 'false' : 'true'}">
       <span class="hover-state ... {active == i ? 'text-gray-800 font-bold' : 'font-medium text-gray-500'}">
         {item.question}
       </span>
