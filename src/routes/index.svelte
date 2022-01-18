@@ -11,7 +11,7 @@
 
   <div class="w-full mx-8 sm:mx-20 max-w-2xl lg:max-w-7xl lg:flex justify-center relative">
     <img class="w-4/5 transform translate-y-28 mt-10 -mb-36 mx-auto animate-floating lg:hidden z-10 relative" src="/images/illustration-woman-online-mobile.svg" alt="Illustration">
-    <div class="bg-gray-50 rounded-3xl inset-shadow my-10 md:mb-20 md:mt-0 svg-background lg:flex relative">
+    <div class="bg-theme-light-gray-blue rounded-3xl inset-shadow my-10 md:mb-20 md:mt-0 svg-background lg:flex relative">
       <div class="push-box lg:hidden"></div>
       
       <div class="svg-illustration hidden lg:block">
@@ -19,7 +19,7 @@
       </div>
       <div class="mx-auto py-12 px-8 lg:py-24 sm:px-16 xl:px-24">
         <div class="mx-auto lg:w-128">
-          <h2 class="text-center lg:text-left text-5xl font-extrabold text-gray-900">
+          <h2 class="text-center lg:text-left text-5xl font-extrabold text-theme-dark-blue">
             FAQ
           </h2>
           <dl class="mt-6 space-y-6 divide-y">
@@ -69,7 +69,6 @@
       background-position-y: 80%;
     }
   }
-
 
   .animate-floating {
     animation: floating 1.4s ease-in-out alternate infinite;

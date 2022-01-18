@@ -19,8 +19,8 @@
 <div class="pt-6">
   <dt class="text-lg min-w-full">
     <!-- Expand/collapse question button -->
-    <button type="button" on:click="{() => setActive('activeState', checkActive(i))}" class="text-left w-full flex justify-between items-start focus:outline-offset-8 focus:outline-slate-300 text-gray-400" aria-controls="faq-{i}" aria-expanded="{active ? 'false' : 'true'}">
-      <span class="hover-state ... {active == i ? 'text-gray-800 font-bold' : 'font-medium text-gray-500'}">
+    <button type="button" on:click="{() => setActive('activeState', checkActive(i))}" class="text-left w-full flex justify-between items-start focus:outline-offset-8 focus:outline-slate-300 text-theme-gray-blue" aria-controls="faq-{i}" aria-expanded="{active ? 'false' : 'true'}">
+      <span class="hover-state ... {active == i ? 'text-theme-dark-blue font-bold' : 'font-medium text-theme-gray-blue'}">
         {item.question}
       </span>
       <span class="ml-6 h-7 flex items-center">
@@ -30,7 +30,7 @@
   </dt>
   {#if active == i}
   <dd transition:slide class="mt-2 pr-12" id="faq-{i}">
-    <p class="text-base text-gray-500">
+    <p class="text-base text-theme-gray-blue">
       {item.answer}
     </p>
   </dd>
