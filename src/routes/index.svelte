@@ -18,7 +18,7 @@
         <img class="object-contain cube hidden lg:block animate-floating"  src="/images/illustration-box-desktop.svg" alt="Illustration">
       </div>
       <div class="mx-auto py-12 px-8 lg:py-24 sm:px-16 xl:px-24">
-        <div class="mx-auto lg:w-128">
+        <div class="mx-auto lg:w-96 xl:w-128">
           <h2 class="text-center lg:text-left text-5xl font-extrabold text-theme-dark-blue">
             FAQ
           </h2>
